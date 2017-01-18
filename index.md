@@ -1,6 +1,6 @@
 ---
 title       : bigqueryR
-subtitle    : A R package for BigQuery.
+subtitle    : R package for BigQuery.
 author      : Yutaka Koga
 job         : GA360 MSC APAC
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -17,17 +17,13 @@ ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
 
 ```r
 library(knitr)
-read_chunk('./bigqueryR-sample')
-```
-
-```
-## Warning in file(con, "r"): cannot open file './bigqueryR-sample': No such
-## file or directory
-```
-
-```
-## Error in file(con, "r"): cannot open the connection
+read_chunk('./bigqueryR-sample.R')
 ```
 
 
+```r
+print('Hello, bigqueryR')
+```
+
+[1] "Hello, bigqueryR"
 

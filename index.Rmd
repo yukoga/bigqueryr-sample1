@@ -1,6 +1,6 @@
 ---
 title       : bigqueryR
-subtitle    : A R package for BigQuery.
+subtitle    : R package for BigQuery.
 author      : Yutaka Koga
 job         : GA360 MSC APAC
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
@@ -16,7 +16,7 @@ ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
 ## Load googleanalyticsR.
 ```{r cache=FALSE}
 library(knitr)
-read_chunk('./bigqueryR-sample')
+read_chunk('./bigqueryR-sample.R')
 ```
 
 ```{r initial-setup, results='asis', cache=FALSE}
