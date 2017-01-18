@@ -23,7 +23,8 @@ query2 = "SELECT
   SUM(totals.visits) AS sessions,
   SUM(totals.pageviews) AS pageviews,
   SUM(totals.timeOnSite) AS timeOnSite
-FROM (TABLE_DATE_RANGE([88451488.ga_sessions_], TIMESTAMP('2016-12-01'), TIMESTAMP('2016-12-14')))
+FROM (TABLE_DATE_RANGE([88451488.ga_sessions_], 
+  TIMESTAMP('2016-12-01'), TIMESTAMP('2016-12-14')))
 GROUP BY
   date
 ORDER BY

@@ -72,7 +72,8 @@ query2 = "SELECT
   SUM(totals.visits) AS sessions,
   SUM(totals.pageviews) AS pageviews,
   SUM(totals.timeOnSite) AS timeOnSite
-FROM (TABLE_DATE_RANGE([88451488.ga_sessions_], TIMESTAMP('2016-12-01'), TIMESTAMP('2016-12-14')))
+FROM (TABLE_DATE_RANGE([88451488.ga_sessions_], 
+  TIMESTAMP('2016-12-01'), TIMESTAMP('2016-12-14')))
 GROUP BY
   date
 ORDER BY
@@ -94,10 +95,10 @@ n1 = nPlot(sessions ~ timeOnSite, group='medium', data=data1, type='scatterChart
 print(n1)
 ```
 
-<iframe src=' assets/fig/scatter-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- chartfa49174a7ea5 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<iframe src=' assets/fig/scatter-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- chartfa4960f07c9c ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 ---
 
 ## Visualize data  
 ### Time series as follows.  
-<iframe src=' assets/fig/line-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart morris ' id=iframe- chartfa4944c880cd ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<iframe src=' assets/fig/line-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart morris ' id=iframe- chartfa491c55e86b ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
