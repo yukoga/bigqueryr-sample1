@@ -94,26 +94,10 @@ n1 = nPlot(sessions ~ timeOnSite, group='medium', data=data1, type='scatterChart
 print(n1)
 ```
 
-<iframe src=' assets/fig/scatter-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- chartfa49576fdc6e ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<iframe src=' assets/fig/scatter-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- chartfa49174a7ea5 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
 
 ---
 
 ## Visualize data  
 ### Time series as follows.  
-
-```r
-m2 = mPlot(x='date', y=list('sessions', 'pageviews'), data=data2, type="Line")
-m2$set(pointSize=0, lineWidth=1, lineColors=list('#09B27F', '#DA00FF'), 
-       labels=list('Sessions', 'Pageviews'), 
-       hideHover='auto',
-       dateFormat = "#! function (x) {
-       _date = new Date((x-1)*60*60*24*1000 + 60*60*24*1000*365*47 + 60*60*24*1000*12);
-       return new Intl.DateTimeFormat('ja').format(_date);
-       }!#",
-       yLabelFormat = "#! function (y) {
-       return (Math.round(y * Math.pow(10, 2)) / Math.pow(10, 2)).toString();
-       }!#")
-print(m2)
-```
-
-<iframe src=' assets/fig/line-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart morris ' id=iframe- chartfa495a9f1e90 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>
+<iframe src=' assets/fig/line-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart morris ' id=iframe- chartfa4944c880cd ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style>

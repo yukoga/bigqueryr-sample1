@@ -67,5 +67,5 @@ install.packages('bigqueryR')
 
 ## Visualize data  
 ### Time series as follows.  
-```{r line-plot, results='asis', cache=FALSE}
+```{r line-plot, results='asis', cache=FALSE, echo=FALSE}
 ```
