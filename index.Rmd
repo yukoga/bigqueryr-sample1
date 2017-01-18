@@ -13,6 +13,14 @@ ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
 
 --- 
 
+## setup 
+```
+install.packages('bigqueryR')
+```
+
+---
+
+
 ## Load bigqueryR.
 ```{r cache=FALSE}
 library(knitr)

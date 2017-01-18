@@ -54,17 +54,30 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Load googleanalyticsR.</h2>
+    <h2>setup</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code>install.packages(&#39;bigqueryR&#39;)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Load bigqueryR.</h2>
   </hgroup>
   <article data-timings="">
     <pre><code class="r">library(knitr)
 read_chunk(&#39;./bigqueryR-sample.R&#39;)
 </code></pre>
 
-<pre><code class="r">print(&#39;Hello, bigqueryR&#39;)
+<pre><code class="r">library(&#39;&#39;)
 </code></pre>
 
-<p>[1] &quot;Hello, bigqueryR&quot;</p>
+<pre><code>## Error in library(&quot;&quot;): invalid package name
+</code></pre>
 
   </article>
   <!-- Presenter Notes -->
@@ -76,8 +89,14 @@ read_chunk(&#39;./bigqueryR-sample.R&#39;)
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Load googleanalyticsR.'>
+        data-slide=1 title='setup'>
          1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Load bigqueryR.'>
+         2
       </a>
     </li>
   </ul>

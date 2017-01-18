@@ -13,7 +13,15 @@ ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
 
 --- 
 
-## Load googleanalyticsR.
+## setup 
+```
+install.packages('bigqueryR')
+```
+
+---
+
+
+## Load bigqueryR.
 
 ```r
 library(knitr)
@@ -22,8 +30,10 @@ read_chunk('./bigqueryR-sample.R')
 
 
 ```r
-print('Hello, bigqueryR')
+library('')
 ```
 
-[1] "Hello, bigqueryR"
+```
+## Error in library(""): invalid package name
+```
 
