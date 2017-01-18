@@ -13,7 +13,7 @@ ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
 
 --- 
 
-## Load googleanalyticsR.
+## Load bigqueryR.
 ```{r cache=FALSE}
 library(knitr)
 read_chunk('./bigqueryR-sample.R')
