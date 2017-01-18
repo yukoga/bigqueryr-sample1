@@ -1,0 +1,33 @@
+---
+title       : bigqueryR
+subtitle    : A R package for BigQuery.
+author      : Yutaka Koga
+job         : GA360 MSC APAC
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : solarized_light      # 
+widgets     : [bootstrap, quiz]            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
+
+--- 
+
+## Load googleanalyticsR.
+
+```r
+library(knitr)
+read_chunk('./bigqueryR-sample')
+```
+
+```
+## Warning in file(con, "r"): cannot open file './bigqueryR-sample': No such
+## file or directory
+```
+
+```
+## Error in file(con, "r"): cannot open the connection
+```
+
+
+
