@@ -54,10 +54,19 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>setup</h2>
+    <h2>Setup</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code>install.packages(&#39;bigqueryR&#39;)
+    <h3>Prerequisites</h3>
+
+<ol>
+<li>[required] Install <a href="https://www.r-project.org/">R</a> (recommended to user latest version.)<br></li>
+<li>[optional] Install <a href="https://www.rstudio.com/">RStudio</a><br></li>
+</ol>
+
+<h3>Install bigqueryR</h3>
+
+<pre><code>install.packages(&#39;bigqueryR&#39;)
 </code></pre>
 
   </article>
@@ -66,18 +75,116 @@
 
 <slide class="" id="slide-2" style="background:;">
   <hgroup>
-    <h2>Load bigqueryR.</h2>
+    <h2>Initial instructions</h2>
   </hgroup>
   <article data-timings="">
-    <pre><code class="r">library(knitr)
-read_chunk(&#39;./bigqueryR-sample.R&#39;)
+    <h3>Load bigqueryR</h3>
+
+<pre><code class="r">library(bigQueryR)
+library(googleAnalyticsR)
 </code></pre>
 
-<pre><code class="r">library(&#39;&#39;)
+<h3>Authentication</h3>
+
+<pre><code class="r">bqr_auth()
 </code></pre>
 
-<pre><code>## Error in library(&quot;&quot;): invalid package name
+<h3>Get lists of your project and datasets</h3>
+
+<pre><code class="r">bqr_list_projects()
+bqr_list_datasets(&quot;project-id&quot;)
 </code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Query Analytics 360 data on BigQuery</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Query pre-defined metrics and dimensions.</h3>
+
+<pre><code class="r">data1 = google_analytics_bq(&#39;gcp-jp&#39;, &#39;88451488&#39;,
+                            start = &#39;2016-12-01&#39;, end = &#39;2016-12-14&#39;,
+                            metrics = c(&#39;sessions&#39;, &#39;pageviews&#39;, &#39;timeOnSite&#39;),
+                            dimensions = c(&#39;source&#39;, &#39;medium&#39;),
+                            sort = &#39;sessions&#39;)
+head(data1)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Query Analytics 360 data on BigQuery</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Or you can query with an any custom query.</h3>
+
+<pre><code class="r">query2 = &quot;SELECT
+  date,
+  SUM(totals.visits) AS sessions,
+  SUM(totals.pageviews) AS pageviews,
+  SUM(totals.timeOnSite) AS timeOnSite
+FROM (TABLE_DATE_RANGE([88451488.ga_sessions_], TIMESTAMP(&#39;2016-12-01&#39;), TIMESTAMP(&#39;2016-12-14&#39;)))
+GROUP BY
+  date
+ORDER BY
+  date ASC
+&quot;
+
+data2 = google_analytics_bq(&#39;gcp-jp&#39;, &#39;88451488&#39;,
+                            query = query2)
+head(data2)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Visualize data</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Now you can show chart with R functionality.</h3>
+
+<pre><code class="r">n1 = nPlot(sessions ~ timeOnSite, group=&#39;medium&#39;, data=data1, type=&#39;scatterChart&#39;)
+print(n1)
+</code></pre>
+
+<p><iframe src=' assets/fig/scatter-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart nvd3 ' id=iframe- chartfa49576fdc6e ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Visualize data</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Time series as follows.</h3>
+
+<pre><code class="r">m2 = mPlot(x=&#39;date&#39;, y=list(&#39;sessions&#39;, &#39;pageviews&#39;), data=data2, type=&quot;Line&quot;)
+m2$set(pointSize=0, lineWidth=1, lineColors=list(&#39;#09B27F&#39;, &#39;#DA00FF&#39;), 
+       labels=list(&#39;Sessions&#39;, &#39;Pageviews&#39;), 
+       hideHover=&#39;auto&#39;,
+       dateFormat = &quot;#! function (x) {
+       _date = new Date((x-1)*60*60*24*1000 + 60*60*24*1000*365*47 + 60*60*24*1000*12);
+       return new Intl.DateTimeFormat(&#39;ja&#39;).format(_date);
+       }!#&quot;,
+       yLabelFormat = &quot;#! function (y) {
+       return (Math.round(y * Math.pow(10, 2)) / Math.pow(10, 2)).toString();
+       }!#&quot;)
+print(m2)
+</code></pre>
+
+<p><iframe src=' assets/fig/line-plot-1.html ' scrolling='no' frameBorder='0' seamless class='rChart morris ' id=iframe- chartfa495a9f1e90 ></iframe> <style>iframe.rChart{ width: 100%; height: 400px;}</style></p>
 
   </article>
   <!-- Presenter Notes -->
@@ -89,14 +196,38 @@ read_chunk(&#39;./bigqueryR-sample.R&#39;)
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='setup'>
+        data-slide=1 title='Setup'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Load bigqueryR.'>
+        data-slide=2 title='Initial instructions'>
          2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Query Analytics 360 data on BigQuery'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Query Analytics 360 data on BigQuery'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Visualize data'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Visualize data'>
+         6
       </a>
     </li>
   </ul>

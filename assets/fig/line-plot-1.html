@@ -1,0 +1,147 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdn.oesmith.co.uk/morris-0.4.2.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js' type='text/javascript'></script>
+    <script src='//cdn.oesmith.co.uk/morris-0.4.2.min.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chartfa495a9f1e90' class = 'rChart morris'></div>    
+    <script type='text/javascript'>
+    var chartParams = {
+ "element": "chartfa495a9f1e90",
+"width":            800,
+"height":            400,
+"xkey": "date",
+"ykeys": [
+ "sessions",
+"pageviews" 
+],
+"data": [
+ {
+ "date":          17136,
+"sessions": 576,
+"pageviews": 4687,
+"timeOnSite": 34025 
+},
+{
+ "date":          17137,
+"sessions": 273,
+"pageviews": 2121,
+"timeOnSite": 17887 
+},
+{
+ "date":          17138,
+"sessions": 242,
+"pageviews": 1603,
+"timeOnSite": 11260 
+},
+{
+ "date":          17139,
+"sessions": 485,
+"pageviews": 3866,
+"timeOnSite": 28780 
+},
+{
+ "date":          17140,
+"sessions": 591,
+"pageviews": 4833,
+"timeOnSite": 32937 
+},
+{
+ "date":          17141,
+"sessions": 499,
+"pageviews": 4105,
+"timeOnSite": 31917 
+},
+{
+ "date":          17142,
+"sessions": 476,
+"pageviews": 3589,
+"timeOnSite": 38302 
+},
+{
+ "date":          17143,
+"sessions": 454,
+"pageviews": 3407,
+"timeOnSite": 19297 
+},
+{
+ "date":          17144,
+"sessions": 272,
+"pageviews": 1718,
+"timeOnSite": 6945 
+},
+{
+ "date":          17145,
+"sessions": 184,
+"pageviews": 1101,
+"timeOnSite": 11234 
+},
+{
+ "date":          17146,
+"sessions": 499,
+"pageviews": 3700,
+"timeOnSite": 26703 
+},
+{
+ "date":          17147,
+"sessions": 677,
+"pageviews": 5495,
+"timeOnSite": 31478 
+},
+{
+ "date":          17148,
+"sessions": 574,
+"pageviews": 4516,
+"timeOnSite": 29573 
+},
+{
+ "date":          17149,
+"sessions": 711,
+"pageviews": 5985,
+"timeOnSite": 53813 
+} 
+],
+"pointSize":              0,
+"lineWidth":              1,
+"lineColors": [
+ "#09B27F",
+"#DA00FF" 
+],
+"labels": [
+ "Sessions",
+"Pageviews" 
+],
+"hideHover": "auto",
+"dateFormat":  function (x) {
+       _date = new Date((x-1)*60*60*24*1000 + 60*60*24*1000*365*47 + 60*60*24*1000*12);
+       return new Intl.DateTimeFormat('ja').format(_date);
+       },
+"yLabelFormat":  function (y) {
+       return (Math.round(y * Math.pow(10, 2)) / Math.pow(10, 2)).toString();
+       },
+"id": "chartfa495a9f1e90" 
+},
+      chartType = "Line"
+    new Morris[chartType](chartParams)
+</script>
+    
+    <script></script>    
+  </body>
+</html>

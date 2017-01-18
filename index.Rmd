@@ -13,20 +13,59 @@ ext_widgets: {rCharts: [libraries/morris, libraries/nvd3]}
 
 --- 
 
-## setup 
+## Setup  
+```{r cache=FALSE, echo=FALSE}
+library(knitr)
+read_chunk('./bigqueryR-sample.R')
+```
+### Prerequisites  
+1. [required] Install [R](https://www.r-project.org/) (recommended to user latest version.)  
+2. [optional] Install [RStudio](https://www.rstudio.com/)  
+  
+### Install bigqueryR  
 ```
 install.packages('bigqueryR')
 ```
 
 ---
 
-
-## Load bigqueryR.
-```{r cache=FALSE}
-library(knitr)
-read_chunk('./bigqueryR-sample.R')
-```
-
+## Initial instructions  
+### Load bigqueryR 
 ```{r initial-setup, results='asis', cache=FALSE}
 ```
 
+### Authentication  
+```{r auth, results='asis', cache=FALSE}
+```
+
+### Get lists of your project and datasets  
+```{r list-projects, results='asis', cache=FALSE, eval=FALSE}
+```
+
+--- 
+
+## Query Analytics 360 data on BigQuery  
+### Query pre-defined metrics and dimensions.  
+```{r query1, results='asis', cache=FALSE, eval=FALSE}
+```
+
+---
+
+## Query Analytics 360 data on BigQuery  
+### Or you can query with an any custom query.  
+```{r query2, results='asis', cache=FALSE, eval=FALSE}
+```
+
+---
+
+## Visualize data  
+### Now you can show chart with R functionality.  
+```{r scatter-plot, results='asis', cache=FALSE}
+```
+
+---
+
+## Visualize data  
+### Time series as follows.  
+```{r line-plot, results='asis', cache=FALSE}
+```

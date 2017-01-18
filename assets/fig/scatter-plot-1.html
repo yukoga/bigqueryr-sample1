@@ -1,0 +1,794 @@
+<!doctype HTML>
+<meta charset = 'utf-8'>
+<html>
+  <head>
+    <link rel='stylesheet' href='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.css'>
+    
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js' type='text/javascript'></script>
+    <script src='//d3js.org/d3.v3.min.js' type='text/javascript'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/nvd3/1.1.15-beta/nv.d3.min.js' type='text/javascript'></script>
+    <script src='//nvd3.org/assets/lib/fisheye.js' type='text/javascript'></script>
+    
+    <style>
+    .rChart {
+      display: block;
+      margin-left: auto; 
+      margin-right: auto;
+      width: 800px;
+      height: 400px;
+    }  
+    </style>
+    
+  </head>
+  <body >
+    
+    <div id = 'chartfa49576fdc6e' class = 'rChart nvd3'></div>    
+    <script type='text/javascript'>
+ $(document).ready(function(){
+      drawchartfa49576fdc6e()
+    });
+    function drawchartfa49576fdc6e(){  
+      var opts = {
+ "dom": "chartfa49576fdc6e",
+"width":    800,
+"height":    400,
+"x": "timeOnSite",
+"y": "sessions",
+"group": "medium",
+"type": "scatterChart",
+"id": "chartfa49576fdc6e" 
+},
+        data = [
+ {
+ "source": "google",
+"medium": "organic",
+"sessions": 3104,
+"pageviews": 19920,
+"timeOnSite": 218408 
+},
+{
+ "source": "(direct)",
+"medium": "(none)",
+"sessions": 1707,
+"pageviews": 14935,
+"timeOnSite": 88104 
+},
+{
+ "source": "google.com",
+"medium": "referral",
+"sessions": 379,
+"pageviews": 3586,
+"timeOnSite": 6083 
+},
+{
+ "source": "web-tan.forum.impressrd.jp",
+"medium": "referral",
+"sessions": 183,
+"pageviews": 2081,
+"timeOnSite": 8431 
+},
+{
+ "source": "yahoo",
+"medium": "organic",
+"sessions": 165,
+"pageviews": 1168,
+"timeOnSite": 8522 
+},
+{
+ "source": "feedburner",
+"medium": "feed",
+"sessions": 113,
+"pageviews": 1439,
+"timeOnSite": 12622 
+},
+{
+ "source": "google.co.jp",
+"medium": "referral",
+"sessions": 69,
+"pageviews": 669,
+"timeOnSite": 2288 
+},
+{
+ "source": "analytics-ja.blogspot.com",
+"medium": "referral",
+"sessions": 51,
+"pageviews": 332,
+"timeOnSite": 893 
+},
+{
+ "source": "bing",
+"medium": "organic",
+"sessions": 40,
+"pageviews": 264,
+"timeOnSite": 1416 
+},
+{
+ "source": "analytics-ja.googleblog.com",
+"medium": "referral",
+"sessions": 39,
+"pageviews": 248,
+"timeOnSite": 653 
+},
+{
+ "source": "feedly.com",
+"medium": "referral",
+"sessions": 39,
+"pageviews": 395,
+"timeOnSite": 268 
+},
+{
+ "source": "t.co",
+"medium": "referral",
+"sessions": 33,
+"pageviews": 216,
+"timeOnSite": 382 
+},
+{
+ "source": "gaforum.jp",
+"medium": "referral",
+"sessions": 30,
+"pageviews": 293,
+"timeOnSite": 2161 
+},
+{
+ "source": "facebook.com",
+"medium": "referral",
+"sessions": 25,
+"pageviews": 283,
+"timeOnSite": 5080 
+},
+{
+ "source": "liskul.com",
+"medium": "referral",
+"sessions": 23,
+"pageviews": 215,
+"timeOnSite": 105 
+},
+{
+ "source": "ayudante.jp",
+"medium": "referral",
+"sessions": 23,
+"pageviews": 238,
+"timeOnSite": 487 
+},
+{
+ "source": "marketimes.jp",
+"medium": "referral",
+"sessions": 22,
+"pageviews": 227,
+"timeOnSite": 865 
+},
+{
+ "source": "m.facebook.com",
+"medium": "referral",
+"sessions": 21,
+"pageviews": 179,
+"timeOnSite": 105 
+},
+{
+ "source": "Internal",
+"medium": "BusinessSolutions",
+"sessions": 17,
+"pageviews": 83,
+"timeOnSite": 67 
+},
+{
+ "source": "a2i.jp",
+"medium": "referral",
+"sessions": 16,
+"pageviews": 159,
+"timeOnSite": 98 
+},
+{
+ "source": "makitani.com",
+"medium": "referral",
+"sessions": 16,
+"pageviews": 178,
+"timeOnSite": 798 
+},
+{
+ "source": "feedburner",
+"medium": "(not set)",
+"sessions": 15,
+"pageviews": 83,
+"timeOnSite": 29 
+},
+{
+ "source": "japan.googleblog.com",
+"medium": "referral",
+"sessions": 14,
+"pageviews": 132,
+"timeOnSite": 855 
+},
+{
+ "source": "kagua.biz",
+"medium": "referral",
+"sessions": 14,
+"pageviews": 187,
+"timeOnSite": 729 
+},
+{
+ "source": "qiita.com",
+"medium": "referral",
+"sessions": 13,
+"pageviews": 21,
+"timeOnSite": null 
+},
+{
+ "source": "seiren-udoku.com",
+"medium": "referral",
+"sessions": 11,
+"pageviews": 106,
+"timeOnSite": 26 
+},
+{
+ "source": "l.facebook.com",
+"medium": "referral",
+"sessions": 10,
+"pageviews": 89,
+"timeOnSite": 8 
+},
+{
+ "source": "cloud-ja.googleblog.com",
+"medium": "referral",
+"sessions": 9,
+"pageviews": 76,
+"timeOnSite": 28 
+},
+{
+ "source": "support.future-shop.jp",
+"medium": "referral",
+"sessions": 9,
+"pageviews": 81,
+"timeOnSite": 12 
+},
+{
+ "source": "creata.hatenablog.com",
+"medium": "referral",
+"sessions": 8,
+"pageviews": 8,
+"timeOnSite": null 
+},
+{
+ "source": "markezine.jp",
+"medium": "referral",
+"sessions": 8,
+"pageviews": 79,
+"timeOnSite": 341 
+},
+{
+ "source": "sitest.jp",
+"medium": "referral",
+"sessions": 8,
+"pageviews": 73,
+"timeOnSite": 408 
+},
+{
+ "source": "it-koala.com",
+"medium": "referral",
+"sessions": 8,
+"pageviews": 61,
+"timeOnSite": 19 
+},
+{
+ "source": "tam-tam.co.jp",
+"medium": "referral",
+"sessions": 7,
+"pageviews": 70,
+"timeOnSite": 187 
+},
+{
+ "source": "s-supporter.hatenablog.jp",
+"medium": "referral",
+"sessions": 7,
+"pageviews": 98,
+"timeOnSite": 635 
+},
+{
+ "source": "kcw.kddi.ne.jp",
+"medium": "referral",
+"sessions": 7,
+"pageviews": 81,
+"timeOnSite": 1477 
+},
+{
+ "source": "b.hatena.ne.jp",
+"medium": "referral",
+"sessions": 7,
+"pageviews": 42,
+"timeOnSite": 367 
+},
+{
+ "source": "analytics-ja.blogspot.my",
+"medium": "referral",
+"sessions": 7,
+"pageviews": 89,
+"timeOnSite": 1203 
+},
+{
+ "source": "4-fusion.jp",
+"medium": "referral",
+"sessions": 6,
+"pageviews": 54,
+"timeOnSite": 5 
+},
+{
+ "source": "dev.classmethod.jp",
+"medium": "referral",
+"sessions": 6,
+"pageviews": 72,
+"timeOnSite": 105 
+},
+{
+ "source": "2843.jp",
+"medium": "referral",
+"sessions": 6,
+"pageviews": 61,
+"timeOnSite": 81 
+},
+{
+ "source": "analytics-ja.blogspot.com.tr",
+"medium": "referral",
+"sessions": 6,
+"pageviews": 27,
+"timeOnSite": 61 
+},
+{
+ "source": "googlewebmastercentral-ja.blogspot.jp",
+"medium": "referral",
+"sessions": 6,
+"pageviews": 54,
+"timeOnSite": 186 
+},
+{
+ "source": "rakuten",
+"medium": "organic",
+"sessions": 6,
+"pageviews": 52,
+"timeOnSite": 242 
+},
+{
+ "source": "yaju3d.hatenablog.jp",
+"medium": "referral",
+"sessions": 5,
+"pageviews": 5,
+"timeOnSite": null 
+},
+{
+ "source": "getpocket.com",
+"medium": "referral",
+"sessions": 5,
+"pageviews": 80,
+"timeOnSite": 2089 
+},
+{
+ "source": "plus.google.com",
+"medium": "referral",
+"sessions": 5,
+"pageviews": 53,
+"timeOnSite": 6 
+},
+{
+ "source": "jp-ww-et-b2bfooter_global",
+"medium": "et",
+"sessions": 4,
+"pageviews": 31,
+"timeOnSite": 74 
+},
+{
+ "source": "em.nyle.co.jp",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 44,
+"timeOnSite": 347 
+},
+{
+ "source": "com.google.android.apps.plus",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 30,
+"timeOnSite": 4 
+},
+{
+ "source": "feedburner",
+"medium": "email",
+"sessions": 4,
+"pageviews": 43,
+"timeOnSite": 95 
+},
+{
+ "source": "sem.kwhunter.com",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 36,
+"timeOnSite": 4 
+},
+{
+ "source": "cdn.ampproject.org",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 28,
+"timeOnSite": 679 
+},
+{
+ "source": "cci.co.jp",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 34,
+"timeOnSite": 6 
+},
+{
+ "source": "chihochu.jp",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 36,
+"timeOnSite": 11 
+},
+{
+ "source": "prtimes.jp",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 35,
+"timeOnSite": 1 
+},
+{
+ "source": "analytics-ja.blogspot.mx",
+"medium": "referral",
+"sessions": 4,
+"pageviews": 22,
+"timeOnSite": 70 
+},
+{
+ "source": "com.google.android.googlequicksearchbox",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 30,
+"timeOnSite": 129 
+},
+{
+ "source": "10.160.84.233:15871",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 4 
+},
+{
+ "source": "unyoo.jp",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 45,
+"timeOnSite": 78 
+},
+{
+ "source": "noyasu.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 14,
+"timeOnSite": 1137 
+},
+{
+ "source": "jiji.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 36,
+"timeOnSite": 25 
+},
+{
+ "source": "analytics-ja.blogspot.jp",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 3 
+},
+{
+ "source": "twitter.com",
+"medium": "social",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 3 
+},
+{
+ "source": "form-mailer.jp",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 26,
+"timeOnSite": 2 
+},
+{
+ "source": "golden-medium-499.appspot.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 8,
+"timeOnSite": 74 
+},
+{
+ "source": "teoma.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 4,
+"timeOnSite": 81 
+},
+{
+ "source": "dlvr.it",
+"medium": "twitter",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 5 
+},
+{
+ "source": "outlook.live.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 101,
+"timeOnSite": 1018 
+},
+{
+ "source": "listing-inclover.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 9 
+},
+{
+ "source": "blogger.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 90,
+"timeOnSite": 1448 
+},
+{
+ "source": "iweb.mei.co.jp",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 2 
+},
+{
+ "source": "analytics.hatenadiary.com",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 27,
+"timeOnSite": 1 
+},
+{
+ "source": "analytics-ja.blogspot.co.za",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 44,
+"timeOnSite": 74 
+},
+{
+ "source": "aichi-brand.jp",
+"medium": "referral",
+"sessions": 3,
+"pageviews": 20,
+"timeOnSite": 190 
+},
+{
+ "source": "imasashi.net",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 27,
+"timeOnSite": 1 
+},
+{
+ "source": "lifehacktokyo.com",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 2 
+},
+{
+ "source": "chatwork.com",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 15,
+"timeOnSite": 1 
+},
+{
+ "source": "feeds.feedburner.com",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 17,
+"timeOnSite": 8 
+},
+{
+ "source": "seo-contents.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 23,
+"timeOnSite": 8 
+},
+{
+ "source": "google.cms-ia.info",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": null 
+},
+{
+ "source": "d.hatena.ne.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 27,
+"timeOnSite": 8 
+},
+{
+ "source": "w2sharepoint",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 2 
+},
+{
+ "source": "172.217.25.193:6080",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 4 
+},
+{
+ "source": "com.slack",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 22 
+},
+{
+ "source": "t.umblr.com",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 10,
+"timeOnSite": null 
+},
+{
+ "source": "nendeb.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 9 
+},
+{
+ "source": "inoreader.com",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 2 
+},
+{
+ "source": "growthseed.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 2 
+},
+{
+ "source": "sooda.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 2 
+},
+{
+ "source": "mitsue.co.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 41,
+"timeOnSite": 342 
+},
+{
+ "source": "taskmother.jp",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 18,
+"timeOnSite": 1 
+},
+{
+ "source": "mail.google.com",
+"medium": "referral",
+"sessions": 2,
+"pageviews": 27,
+"timeOnSite": 389 
+},
+{
+ "source": "analytics-ja.blogspot.tw",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 5,
+"timeOnSite": 3 
+},
+{
+ "source": "freesoft.tvbok.com",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 9,
+"timeOnSite": null 
+},
+{
+ "source": "kamel.io",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 9,
+"timeOnSite": 1 
+},
+{
+ "source": "techblog.lclco.com",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 9,
+"timeOnSite": 1 
+},
+{
+ "source": "docodoco.jp",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 9,
+"timeOnSite": 3 
+},
+{
+ "source": "smartnews.com",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 9,
+"timeOnSite": 1 
+},
+{
+ "source": "fujii-yuji.net",
+"medium": "referral",
+"sessions": 1,
+"pageviews": 8,
+"timeOnSite": 3 
+} 
+]
+  
+      if(!(opts.type==="pieChart" || opts.type==="sparklinePlus" || opts.type==="bulletChart")) {
+        var data = d3.nest()
+          .key(function(d){
+            //return opts.group === undefined ? 'main' : d[opts.group]
+            //instead of main would think a better default is opts.x
+            return opts.group === undefined ? opts.y : d[opts.group];
+          })
+          .entries(data);
+      }
+      
+      if (opts.disabled != undefined){
+        data.map(function(d, i){
+          d.disabled = opts.disabled[i]
+        })
+      }
+      
+      nv.addGraph(function() {
+        var chart = nv.models[opts.type]()
+          .width(opts.width)
+          .height(opts.height)
+          
+        if (opts.type != "bulletChart"){
+          chart
+            .x(function(d) { return d[opts.x] })
+            .y(function(d) { return d[opts.y] })
+        }
+          
+         
+        
+          
+        
+
+        
+        
+        
+      
+       d3.select("#" + opts.id)
+        .append('svg')
+        .datum(data)
+        .transition().duration(500)
+        .call(chart);
+
+       nv.utils.windowResize(chart.update);
+       return chart;
+      });
+    };
+</script>
+    
+    <script></script>    
+  </body>
+</html>
